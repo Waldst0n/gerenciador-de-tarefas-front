@@ -2,7 +2,13 @@ import React from 'react';
 
 import './CustomInput.scss';
 
-const CustomInput = ({ label, value, onchange }) => {
+const CustomInput = ({ label, value, onchange, onEnterPress }) => {
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            onEnterPress();
+        }
+    };
+
     return (
         <div className="custom-input-container">
             <input
@@ -10,6 +16,7 @@ const CustomInput = ({ label, value, onchange }) => {
                 className="custom-input"
                 value={value}
                 onChange={(e) => onchange(e)}
+                onKeyDown={(e) => handleKeyDown(e)}
             />
             {label ? (
                 <label
