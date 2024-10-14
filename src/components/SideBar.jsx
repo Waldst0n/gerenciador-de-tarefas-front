@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Button } from './Button';
+import Button from './Button';
 
-import './SideBar.scss';
+import './Sidebar.scss';
 
 const SideBar = () => {
     return (
@@ -12,7 +12,7 @@ const SideBar = () => {
             </div>
 
             <div className="signout">
-                <Button />
+                <Button>Sair</Button>
             </div>
         </div>
     );
