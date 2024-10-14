@@ -9,7 +9,7 @@ import AddTask from './AddTask';
 const Tasks = () => {
     const [tasks, setTasks] = useState([]);
 
-    const fetchTasks = async (url) => {
+    const fetchTasks = async () => {
         try {
             const { data } = await axios.get('http://localhost:8000/tasks');
             setTasks(data);
@@ -33,7 +33,7 @@ const Tasks = () => {
                     {tasks
                         .filter((task) => task.isCompleted === false)
                         .map((lastTask) => (
-                            <TaskItem task={lastTask} />
+                            <TaskItem task={lastTask} fetchTasks={fetchTasks} />
                         ))}
                 </div>
             </div>
@@ -43,8 +43,11 @@ const Tasks = () => {
                 <div className="tasks-list">
                     {tasks
                         .filter((task) => task.isCompleted)
-                        .map((lastTask) => (
-                            <TaskItem task={lastTask} />
+                        .map((completedTasks) => (
+                            <TaskItem
+                                task={completedTasks}
+                                fetchTasks={fetchTasks}
+                            />
                         ))}
                 </div>
             </div>

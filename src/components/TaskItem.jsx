@@ -6,17 +6,22 @@ import { AiFillDelete } from 'react-icons/ai';
 
 import './TaskItem.scss';
 
-const TaskItem = ({ task }) => {
+const TaskItem = ({ task, fetchTasks }) => {
     const alert = useAlert();
 
     const handleTaskDeletion = async () => {
         try {
             await axios.delete(`http://localhost:8000/tasks/${task._id}`);
+
+            await fetchTasks();
+
+            alert.success('A tarefa foi removida com sucesso!');
         } catch (error) {
             alert.error('Algo deu errado');
-            console.log(error);
         }
     };
+
+    console.log(fetchTasks());
 
     return (
         <div className="task-item-container">
