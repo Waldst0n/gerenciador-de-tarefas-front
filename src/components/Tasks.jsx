@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 
 import TaskItem from './TaskItem';
 
-import './tasks.scss';
+import './Tasks.scss';
 
 const Tasks = () => {
     const [tasks, setTasks] = useState([]);
