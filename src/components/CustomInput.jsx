@@ -8,6 +8,7 @@ const CustomInput = ({ label, value, onchange }) => {
             <input
                 type="text"
                 className="custom-input"
+                value={value}
                 onChange={(e) => onchange(e)}
             />
             {label ? (
