@@ -1,15 +1,23 @@
 import React from 'react';
 
-const CustomInput = ({ label, value }) => {
+import './CustomInput.scss';
+
+const CustomInput = ({ label, value, onchange }) => {
     return (
         <div className="custom-input-container">
-            <input type="text" className="custom-input" />
+            <input
+                type="text"
+                className="custom-input"
+                onChange={(e) => onchange(e)}
+            />
             {label ? (
                 <label
                     className={`${
                         value.length > 0 ? 'shrink' : ''
                     } custom-input-label`}
-                ></label>
+                >
+                    {label}
+                </label>
             ) : null}
         </div>
     );
