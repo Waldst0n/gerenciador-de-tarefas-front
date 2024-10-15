@@ -1,46 +1,46 @@
 .tasks-container {
-    padding: 60px 85px;
+  padding: 60px 85px;
+  display: flex;
+  flex-direction: column;
+  max-width: 40%;
+  padding-top: 50px;
+  height: 100vh;
+
+  @media (max-width: 1024px) {
+    max-width: 60%;
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px;
+    max-width: 60%;
+  }
+
+  h2 {
+    margin-bottom: 24px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  .last-tasks {
+    flex: 1;
+    overflow-y: hidden;
     display: flex;
     flex-direction: column;
-    max-width: 40%;
-    padding-top: 50px;
-    height: 100vh;
-
-    @media (max-width: 1024px) {
-        max-width: 60%;
-    }
-
-    @media (max-width: 768px) {
-        padding: 30px;
-        max-width: 60%;
-    }
-
-    h2 {
-        margin-bottom: 24px;
-    }
 
     h3 {
-        font-size: 18px;
+      margin-bottom: 18px;
     }
+  }
 
-    .last-tasks {
-        flex: 1;
-        overflow-y: hidden;
-        display: flex;
-        flex-direction: column;
+  .tasks-list {
+    overflow-y: auto;
+    margin-top: 28px;
+  }
 
-        h3 {
-            margin-bottom: 18px;
-        }
-    }
-
-    .tasks-list {
-        overflow-y: auto;
-        margin-top: 28px;
-    }
-
-    .completed-tasks {
-        flex: 1;
-        padding-top: 28px;
-    }
+  .completed-tasks {
+    flex: 1;
+    padding-top: 28px;
+  }
 }

@@ -1,13 +1,13 @@
 .add-task-container {
-    display: flex;
-    gap: 16px;
-    align-items: center;
+  display: flex;
+  gap: 16px;
+  align-items: center;
 
-    div:first-child {
-        width: 100%;
-    }
+  div:first-child {
+    width: 100%;
+  }
 
-    .custom-button-container {
-        margin-left: 16px;
-    }
+  .custom-button-container {
+    margin-left: 16px;
+  }
 }
