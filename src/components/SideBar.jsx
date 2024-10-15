@@ -8,7 +8,7 @@ const SideBar = () => {
     return (
         <div className="sidebar-container">
             <div className="logo">
-                <h2>Waldston Santana</h2>
+                <h2>Gerencia</h2>
             </div>
 
             <div className="signout">
