@@ -1,14 +1,14 @@
-import './App.scss';
-import SideBar from './components/SideBar';
+import { Routes, Route } from 'react-router-dom';
 
-import Tasks from './components/Tasks';
+import Home from './pages/Home';
+
+import './App.scss';
 
 const App = () => {
     return (
-        <div className="app-container">
-            <SideBar />
-            <Tasks />
-        </div>
+        <Routes>
+            <Route path="/" element={<Home />} />
+        </Routes>
     );
 };
 
