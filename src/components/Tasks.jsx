@@ -14,7 +14,7 @@ const Tasks = () => {
             const { data } = await axios.get('http://localhost:8000/tasks');
             setTasks(data);
         } catch (error) {
-            console.log(error);
+            console.error(error);
         }
     };
 
