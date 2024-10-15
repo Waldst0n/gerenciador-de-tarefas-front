@@ -9,7 +9,7 @@ import './Sidebar.scss';
 const SideBar = () => {
     const navigate = useNavigate();
 
-    const handleAssignInClick = () => {
+    const handleSignOutInClick = () => {
         navigate('/login');
     };
 
@@ -20,7 +20,7 @@ const SideBar = () => {
             </div>
 
             <div className="signout">
-                <Button onClick={handleAssignInClick}>Sair</Button>
+                <Button onClick={handleSignOutInClick}>Sair</Button>
             </div>
         </div>
     );
