@@ -1,18 +1,26 @@
+import logo from '../assets/img/Logotipo_empresa_de_programação_sistemas_e_tecnologia-removebg-preview.png';
 import React from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 import Button from './Button';
 
 import './Sidebar.scss';
 
 const SideBar = () => {
+    const navigate = useNavigate();
+
+    const handleAssignInClick = () => {
+        navigate('/login');
+    };
+
     return (
         <div className="sidebar-container">
             <div className="logo">
-                <h2>Gerencia</h2>
+                <img className="logo" src={logo} alt="Logo Waldston Santana" />
             </div>
 
             <div className="signout">
-                <Button>Sair</Button>
+                <Button onClick={handleAssignInClick}>Sair</Button>
             </div>
         </div>
     );
