@@ -11,9 +11,7 @@ const TaskItem = ({ task, fetchTasks }) => {
 
   const handleTaskDeletion = async () => {
     try {
-      const response = await axios.delete(
-        `${process.env.REACT_APP_API_URL}/${task._id}`
-      )
+      await axios.delete(`${process.env.REACT_APP_API_URL}/tasks/${task._id}`)
 
       await fetchTasks()
 
